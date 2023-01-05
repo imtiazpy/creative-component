@@ -7,7 +7,7 @@ cards.forEach(card => {
 })
 
 const tiltEffectSettings = {
-    max: 25,
+    max: 10,
     perspective: 1000,
     scale: 1.05,
     speed: 500,
