@@ -12,11 +12,9 @@ body {
     gap: 20px;
     background-color: #202020;
     font-family: 'Courier New', Courier, monospace;
-    background-image: 
-        linear-gradient(
-            rgba(0, 0, 0, .6), 
-            rgba(10, 0, 0, .6)
-        ), 
+    background-image:
+        linear-gradient(rgba(0, 0, 0, .6),
+            rgba(10, 0, 0, .6)),
         url('https://images.unsplash.com/photo-1526959300019-11dd99a21233?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,7 +23,7 @@ body {
 
 .scene {
     width: 300px;
-    height: 400px;
+    height: 60vh;
     perspective: 600px;
     z-index: 1;
 }
@@ -114,6 +112,7 @@ body {
     cursor: pointer;
     text-decoration: underline;
 }
+
 .content a:hover {
     color: #47aafa;
 }
@@ -194,5 +193,17 @@ body {
         padding: 0;
         line-height: 18px;
         word-spacing: -4px;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .card-footer {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .back-content {
+        overflow-y: scroll;
     }
 }
