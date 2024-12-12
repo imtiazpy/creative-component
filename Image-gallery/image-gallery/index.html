@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <style id="scale-up">
+    .scale-up { transition: .3s ease-out; }
+    .scale-up:hover { cursor: pointer; transform: scale(1.1); }
+    .scale-up:active { transform: scale(.85); }
+  </style>
+</head>
+
+<body>
+  <h1 class="heading">Just CSS Photo Gallery</h1>
+  <div class="container">
+    <div class="gallery">
+      <img src="assets/Bike-1.jpg" alt="">
+      <img src="assets/Bike-2.jpg" alt="">
+      <img src="assets/Bike-3.jpg" alt="">
+      <img src="assets/Bike-4.jpg" alt="">
+      <img src="assets/Bike-5.jpg" alt="">
+      <img src="assets/Bike-6.jpg" alt="">
+      <img src="assets/Bike-7.jpg" alt="">
+      <img src="assets/Bike-8.jpg" alt="">
+      <img src="assets/Bike-9.jpg" alt="">
+    </div>
+  </div>
+
+
+
+  <div class="design-container" id="display">
+    <div class="scale-up square" onclick="copyCode('scale-up')">
+      <h4>Scale Up</h4>
+    </div>
+  </div>
+
+
+
+
+
+  <script>
+    const copyCode = (cssStyle) => {
+      const text = document.getElementById(cssStyle).textContent;
+      const copyHex = document.createElement('textarea');
+
+      const dc = document.getElementById('display');
+
+      copyHex.innerText = text
+
+      dc.appendChild(copyHex)
+    }
+  </script>
+</body>
+
+</html>

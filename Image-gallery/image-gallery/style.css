@@ -1,0 +1,77 @@
+:root {
+  --s: 160px; /* controls the gallery grid size */
+  --g: 10px; /* controls the gap between cells */
+  --n: 3; /* number of rows*/
+  --m: 3; /* number of columns */
+  --f: 1.5; /* controls the scale factor when hovering */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background: linear-gradient(180deg, #3A2782 0%, #180d41 50%, #050506 100% );
+}
+
+.heading {
+  text-align: center;
+  color: white;
+  font-size: 6rem;
+  font-family: 'Road Rage', cursive;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.container {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery {
+  display: grid;
+  gap: var(--g);
+  width: calc(var(--m)*var(--s) + (var(--m) - 1)*var(--g)); 
+  height: calc(var(--n)*var(--s) + (var(--n) - 1)*var(--g));
+  grid-template-columns: repeat(var(--m), auto);
+}
+
+.gallery > img {
+  width: 0;
+  height: 0;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  filter: grayscale(80%);
+  transition: .35s linear;
+}
+
+.gallery img:hover{
+  filter: grayscale(0);
+  width:  calc(var(--s) * var(--f));
+  height: calc(var(--s) * var(--f));
+}
+
+
+
+.design-container {
+  display: flex;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+
+  margin-bottom: 50px;
+}
+
+.square {
+  width: 100px;
+  padding: 10px;
+  background-color: yellow;
+  color: black;
+}
+   
